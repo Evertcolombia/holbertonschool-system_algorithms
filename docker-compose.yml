@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: holbertonschool-system_linux_web
+    # build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/code
+    command: sh -c "while true; do sleep 1; done"
