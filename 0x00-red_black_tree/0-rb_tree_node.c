@@ -19,15 +19,11 @@ rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 	if (new == NULL)
 		return (NULL);
 
-	if (color == BLACK)
-		new->color = RED;
-	else
-		new->color = color;
-
 	new->parent = parent;
 	new->n = value;
 	new->left = NULL;
 	new->right = NULL;
+	new->color = color;
 
 	return (new);
 }
