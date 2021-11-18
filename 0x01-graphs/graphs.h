@@ -71,4 +71,6 @@ typedef struct graph_s
 graph_t *graph_create(void);
 vertex_t *graph_add_vertex(graph_t *graph, const char *str);
 void graph_display(const graph_t *graph);
+int graph_add_edge(graph_t *graph, const char *src, const char *, edge_type_t);
+
 #endif /* _GRAPHS_H_ */
