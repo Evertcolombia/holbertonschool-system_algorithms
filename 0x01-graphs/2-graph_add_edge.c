@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * init_edge - init edge
+ * @src: src
+ * @dest: vertex
+ *
+ * Return: int static
+ */
 static int init_edge(vertex_t *src, vertex_t *dest)
 {
 	edge_t *new, **p;
@@ -25,6 +32,13 @@ static int init_edge(vertex_t *src, vertex_t *dest)
 	return (1);
 }
 
+/**
+ * get_vertex - get vertex
+ * @graph: graph
+ * @content: content
+ *
+ * Return: None
+ */
 static vertex_t *get_vertex(graph_t *graph, const char *content)
 {
 	vertex_t *p;
@@ -39,6 +53,15 @@ static vertex_t *get_vertex(graph_t *graph, const char *content)
 	return (p);
 }
 
+/**
+ * graph_add_edge - add edge
+ * @graph: graph
+ * @src: source
+ * @dest: destiny
+ * @type: type
+ *
+ * Return: int
+ */
 int graph_add_edge(
 	graph_t *graph, const char *src, const char *dest, edge_type_t type)
 {
