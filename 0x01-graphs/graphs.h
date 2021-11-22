@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define VISITED void (*action)(const vertex_t *v, size_t depth)
 /**
  * enum edge_type_e - Enumerates the different types of
  * connection between two vertices
@@ -14,8 +15,8 @@
  */
 typedef enum edge_type_e
 {
-    UNIDIRECTIONAL = 0,
-    BIDIRECTIONAL
+	UNIDIRECTIONAL = 0,
+	BIDIRECTIONAL
 } edge_type_t;
 
 /* Define the structure temporarily for usage in the edge_t */
@@ -73,6 +74,8 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str);
 void graph_display(const graph_t *graph);
 int graph_add_edge(graph_t *graph, const char *src, const char *, edge_type_t);
 void graph_delete(graph_t *graph);
+size_t depth_first_traverse(const graph_t *graph, VISITED);
+typedef void (*action_t)(const vertex_t *, size_t);
 
 
 #endif /* _GRAPHS_H_ */
