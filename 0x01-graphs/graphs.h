@@ -76,6 +76,6 @@ int graph_add_edge(graph_t *graph, const char *src, const char *, edge_type_t);
 void graph_delete(graph_t *graph);
 size_t depth_first_traverse(const graph_t *graph, VISITED);
 typedef void (*action_t)(const vertex_t *, size_t);
-
+size_t breadth_first_traverse(const graph_t *graph, VISITED);
 
 #endif /* _GRAPHS_H_ */
